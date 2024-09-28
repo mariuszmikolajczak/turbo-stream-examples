@@ -1,0 +1,11 @@
+<h1>First example</h1>
+
+<h2>
+  <%= turbo_frame_tag(:target_tag) do %>
+    Initial Text
+  <% end %>
+</h2>
+
+<%= form_with(url: make_request_path(format: :turbo_stream), html: { method: :put, remote: true }) do |f| %>
+  <%= f.submit "Save" %>
+<% end %>
